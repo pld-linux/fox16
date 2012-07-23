@@ -1,17 +1,16 @@
 #
 # Conditional build:
-%bcond_without	cups		# CUPS support
 %bcond_without	static_libs	# don't build static libraries
 #
 Summary:	The FOX 1.6 C++ GUI Toolkit
 Summary(pl.UTF-8):	FOX 1.6 - toolkit graficzny w C++
 Name:		fox16
-Version:	1.6.44
-Release:	6
+Version:	1.6.46
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
-Source0:	http://fox-toolkit.org/ftp/fox-%{version}.tar.gz
-# Source0-md5:	f3c66bbe87b65de3a3fb480278bcfffd
+Source0:	http://ftp.fox-toolkit.org/pub/fox-%{version}.tar.gz
+# Source0-md5:	da2c5cf36eff32a0c49cfcd9494fe6b7
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-link.patch
 Patch2:		%{name}-Makefile.patch
@@ -20,7 +19,6 @@ BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	autoconf >= 2.59-9
 BuildRequires:	automake
 BuildRequires:	bzip2-devel >= 1.0.2
-%{?with_cups:BuildRequires:	cups-devel}
 BuildRequires:	doxygen
 BuildRequires:	graphviz
 BuildRequires:	libjpeg-devel >= 6b
@@ -140,7 +138,6 @@ FOX 1.6 - przykładowe programy.
 %{__autoconf}
 %{__automake}
 %configure \
-	%{?with_cups:--enable-cups} \
 	%{?debug:--enable-debug}%{!?debug:--enable-release} \
 	--enable-static%{!?with_static_libs:=no} \
 	--with-opengl \
