@@ -14,6 +14,7 @@ Source0:	http://ftp.fox-toolkit.org/pub/fox-%{version}.tar.gz
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-link.patch
 Patch2:		%{name}-Makefile.patch
+Patch3:		%{name}-format.patch
 URL:		http://www.fox-toolkit.org/
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	autoconf >= 2.59-9
@@ -131,6 +132,7 @@ FOX 1.6 - przykładowe programy.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 %{__libtoolize}
