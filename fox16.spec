@@ -1,16 +1,16 @@
 #
 # Conditional build:
-%bcond_without	static_libs	# don't build static libraries
+%bcond_without	static_libs	# static libraries
 #
 Summary:	The FOX 1.6 C++ GUI Toolkit
 Summary(pl.UTF-8):	FOX 1.6 - toolkit graficzny w C++
 Name:		fox16
-Version:	1.6.53
-Release:	2
+Version:	1.6.57
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
-Source0:	http://ftp.fox-toolkit.org/pub/fox-%{version}.tar.gz
-# Source0-md5:	324a8f4c53e9bee690252b229ca74a73
+Source0:	http://fox-toolkit.org/ftp/fox-%{version}.tar.gz
+# Source0-md5:	675ddeac64eef88d9f7360abaa56b995
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-Makefile.patch
 Patch2:		%{name}-format.patch
@@ -58,7 +58,7 @@ Summary:	FOX 1.6 example applications
 Summary(pl.UTF-8):	Przykłady aplikacji wykorzystujących FOX 1.6
 Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
-Obsoletes:	fox-example-apps
+Obsoletes:	fox-example-apps < 0.99.173
 Obsoletes:	fox-progs < 1.7
 Conflicts:	fox-progs >= 1.7
 
