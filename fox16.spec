@@ -5,12 +5,12 @@
 Summary:	The FOX 1.6 C++ GUI Toolkit
 Summary(pl.UTF-8):	FOX 1.6 - toolkit graficzny w C++
 Name:		fox16
-Version:	1.6.57
-Release:	2
+Version:	1.6.58
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://fox-toolkit.org/ftp/fox-%{version}.tar.gz
-# Source0-md5:	675ddeac64eef88d9f7360abaa56b995
+# Source0-md5:	f9924fb5e8ecbdfca0978a7afbb2c64e
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-Makefile.patch
 Patch2:		%{name}-format.patch
