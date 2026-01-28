@@ -5,12 +5,12 @@
 Summary:	The FOX 1.6 C++ GUI Toolkit
 Summary(pl.UTF-8):	FOX 1.6 - toolkit graficzny w C++
 Name:		fox16
-Version:	1.6.58
-Release:	3
+Version:	1.6.59
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://fox-toolkit.org/ftp/fox-%{version}.tar.gz
-# Source0-md5:	f9924fb5e8ecbdfca0978a7afbb2c64e
+# Source0-md5:	50abdc58a08b62a42c7a4958b7961bd2
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-Makefile.patch
 Patch2:		%{name}-format.patch
@@ -178,10 +178,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS LICENSE_ADDENDUM README
-%attr(755,root,root) %{_libdir}/libCHART-1.6.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libCHART-1.6.so.0
-%attr(755,root,root) %{_libdir}/libFOX-1.6.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libFOX-1.6.so.0
+%{_libdir}/libCHART-1.6.so.*.*.*
+%ghost %{_libdir}/libCHART-1.6.so.0
+%{_libdir}/libFOX-1.6.so.*.*.*
+%ghost %{_libdir}/libFOX-1.6.so.0
 
 %files progs
 %defattr(644,root,root,755)
@@ -200,8 +200,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc ADDITIONS TRACING
 %attr(755,root,root) %{_bindir}/fox16-config
 %attr(755,root,root) %{_bindir}/reswrap16
-%attr(755,root,root) %{_libdir}/libCHART-1.6.so
-%attr(755,root,root) %{_libdir}/libFOX-1.6.so
+%{_libdir}/libCHART-1.6.so
+%{_libdir}/libFOX-1.6.so
 %{_libdir}/libCHART-1.6.la
 %{_libdir}/libFOX-1.6.la
 %{_includedir}/fox-1.6
